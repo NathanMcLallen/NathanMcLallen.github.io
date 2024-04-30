@@ -1,0 +1,87 @@
+    <!DOCTYPE html>
+
+   
+    <script src="http://127.0.0.1/dist/d3.min.js"></script>	
+    <script src="http://127.0.0.1/jsmol/JSmol.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+
+
+<script src="plots.js" ></script>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body onload="myExamplePlot1()">
+    <main>
+        <h1>Welcome to My Website</h1>  
+        
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+        <script>
+          function changeModels(value){
+    //var selectedID = document.getElementById("dropdown").value;
+    var modelOne = document.getElementById("boundModel");
+    var modelTwo = document.getElementById("unboundModel");
+
+  if (value === "1cdw"){
+ modelOne.src = "my_examples/1cdw/1cdw_boundREDUCED.glb";
+ modelTwo.src = "my_examples/1cdw/1cdw_unboundREDUCED.glb";
+//modelOne.setAttribute("src", "my_examples/1cdw/1cdw_boundREDUCED.glb");
+//modelTwo.setAttribute("src", "my_examples/1cdw/1cdw_unboundREDUCED.glb");
+  myExamplePlot1();
+  } else if (value === "1uwh"){
+    modelOne.src = "my_examples/1uwh/1uwh_boundREDUCED.glb";
+    modelTwo.src = "my_examples/1uwh/1uwh_unboundREDUCED.glb";
+  // modelOne.setAttribute("src", "my_examples/1uwh/1uwh_boundREDUCED.glb");
+//modelTwo.setAttribute("src", "my_examples/1uwh/1uwh_unboundREDUCED.glb");
+    myExamplePlot2();
+  } else if (value === "6vw1"){
+ 
+    modelOne.src = "my_examples/6vw1/6vw1_boundREDUCED.glb";
+    modelTwo.src = "my_examples/6vw1/6vw1_unboundREDUCED.glb";
+  // modelOne.setAttribute("src", "my_examples/6vw1/6vw1_boundREDUCED.glb");
+//modelTwo.setAttribute("src", "my_examples/6vw1/6vw1_unboundREDUCED.glb");
+    myExamplePlot3();
+  }
+
+ }
+        </script>
+
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="testingFilename">
+          <input type="submit">
+        </form>
+
+        <select id="dropdown" onchange="changeModels(this.value)">
+          <option value="1cdw">TATA binding protein</option>
+          <option value="1uwh">SARS-COV-2</option>
+          <option value="6vw1">sorafenib</option>
+        </select>
+
+        
+
+        <model-viewer id="boundModel" alt="bound" src="my_examples/1cdw/1cdw_boundREDUCED.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+        <model-viewer id="unboundModel" alt="unbound" src="my_examples/1cdw/1cdw_unboundREDUCED.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
+          <div id='myPlot1'><!-- Plotly chart will be drawn inside this DIV --></div>
+          <div id='myPlot2'><!-- Plotly chart will be drawn inside this DIV --></div>
+          <div id='myPlot3'><!-- Plotly chart will be drawn inside this DIV --></div>
+      
+    </main>
+  </body>
+
+
+
+
+</html>
