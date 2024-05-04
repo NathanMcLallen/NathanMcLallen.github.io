@@ -1,0 +1,44 @@
+body {
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(159,159,213,1) 1%, rgba(64,223,255,1) 72%);
+  }
+
+.modelview {
+    height: 500px;
+    width: 700px;
+    
+}
+
+.modelLabel {
+  width: 700px;
+  text-align:center;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+.sideBySide{
+  display: flex; 
+	flex-direction: row; 
+	flex-wrap: wrap; 
+  text-align:center;
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: bold;
+  color: red;
+  text-align:center;
+}
+
+.alignCenter {
+  text-align:center;
+}
+
+.dropdown {
+  height: 40px;
+}
+
+.chartDescription {
+  font-size: 20px;
+}

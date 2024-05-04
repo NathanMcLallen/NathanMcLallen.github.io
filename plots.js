@@ -49,6 +49,8 @@
   
   var layout1 = {
     dragmode: 'zoom',
+    plot_bgcolor:"rgba(0,0,0,0)",
+    paper_bgcolor:"rgba(0,0,0,0)",
     showlegend: false,
     xaxis: {
       autorange: true,
@@ -64,6 +66,9 @@
     yaxis: {
       autorange: true,
     }
+
+    
+
   };
   
   Plotly.newPlot('myPlot1', data1, layout1);
@@ -91,9 +96,12 @@
   
   var layout2 = {
     dragmode: 'zoom',
+    plot_bgcolor:"rgba(0,0,0,0)",
+    paper_bgcolor:"rgba(0,0,0,0)",
     showlegend: false,
     xaxis: {
       autorange: true,
+      
       title: 'position on amino acid sequence',
      rangeselector: {
           x: 0,
@@ -134,9 +142,12 @@
   var layout3 = {
     dragmode: 'zoom',
     showlegend: false,
+    plot_bgcolor:"rgba(0,0,0,0)",
+    paper_bgcolor:"rgba(0,0,0,0)",
     xaxis: {
       autorange: true,
       title: 'position on amino acid sequence',
+     
      rangeselector: {
           x: 0,
           y: 1.2,
@@ -154,4 +165,4 @@
   });
   }
   
-  
+ 
